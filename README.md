@@ -87,4 +87,4 @@
 
 ## Diretc Connect
     专线
-  ![专线网络架构](.\directConnect\1666883898115.jpg)
+  ![专线网络架构](./directConnect/1666883898115.jpg)
