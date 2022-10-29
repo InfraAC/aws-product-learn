@@ -2,9 +2,10 @@
 <!-- TOC -->
 
 - [aws product learn](#aws-product-learn)
-    - [EC2](#ec2)
+    - [EC2实验](#ec2%E5%AE%9E%E9%AA%8C)
     - [S3](#s3)
     - [VPC](#vpc)
+    - [VPC实验](#vpc%E5%AE%9E%E9%AA%8C)
     - [CloudWatch](#cloudwatch)
     - [ELB Elastic Load Balancing](#elb-elastic-load-balancing)
     - [RDS Relational Database Service](#rds-relational-database-service)
@@ -15,7 +16,7 @@
     - [Diretc Connect](#diretc-connect)
 
 <!-- /TOC -->
-## EC2
+## EC2实验
     创建
       aws cloudformation deploy --stack-name ec2-simple --template-file ./example/ec2/EC2InstanceWithSecurityGroupSample.yaml
     删除
@@ -42,6 +43,26 @@
   - 高可用VPC网络架构
 
     ![高可用VPC网络架构](./vpcHAArchitecture/vpc-architecture_diagram.png)
+
+  - CloudFormation模板VPC
+
+    ![CloudFormation模板VPC](./vpcCloudFormationTemplate/template1-designer.png)
+
+## VPC实验
+    创建
+      aws cloudformation deploy --stack-name vpc-simple --template-file ./example/vpc/codebuild-vpc-cfn.yaml
+    删除
+      aws cloudformation delete-stack --stack-name vpc-simple
+    测试
+      
+    遇到问题
+      SSL validation failed for https://cloudformation.ap-northeast-2.amazonaws.com/ EOF occurred in violation of protocol (_ssl.c:1129)
+        关掉代理就好
+    实验过程知识点
+      AWS-VPC-Egress 识别从所有 VPC 到互联网网关、对等连接、VPC 终端节点、VPN 和 Transit Gateway 的出口路径。
+      AWS-VPC-Ingress 识别从互联网网关、对等连接、VPC 服务终端节点、VPN 和 Transit Gateway 进入 VPC 的入口路径。
+      AWS-IGW-Egress 识别从所有网络接口到互联网网关的出口路径。
+      All-IGW-Ingress 识别从互联网网关到所有网络接口的入口路径。
 
 ## CloudWatch
     默认监控指标
