@@ -16,12 +16,19 @@
 
 <!-- /TOC -->
 ## EC2
-    ssh -i C:\Users\Administrator\OneDrive\study\aws-product-learn\aws-product-learn.pem ubuntu@16.163.58.102
+    创建
+      aws cloudformation deploy --stack-name ec2-simple --template-file ./example/ec2/EC2InstanceWithSecurityGroupSample.yaml
+    删除
+      aws cloudformation delete-stack --stack-name ec2-simple
+    测试
+      ssh -i C:\Users\Administrator\OneDrive\study\aws-product-learn\aws-product-learn.pem root@13.125.202.87
+    遇到问题
+      模板中LatestAmiId不能更换，想换成CentOs或Ubuntu系统
 
 ## S3
     最大单个文件5TB
     持久性11个9
-    S3 Glacier不需要立即访问但需要灵活
+    S3 Glacier不需要立即访问但需要灵活检索
 
 ## VPC
     VPC可以跨az
