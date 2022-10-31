@@ -9,6 +9,7 @@
     - [VPC实验](#vpc%E5%AE%9E%E9%AA%8C)
     - [CloudWatch](#cloudwatch)
     - [ELB Elastic Load Balancing](#elb-elastic-load-balancing)
+    - [ELB 实验](#elb-%E5%AE%9E%E9%AA%8C)
     - [RDS Relational Database Service](#rds-relational-database-service)
     - [DynamoDB适用场景](#dynamodb%E9%80%82%E7%94%A8%E5%9C%BA%E6%99%AF)
     - [其它专门构建的数据库服务](#%E5%85%B6%E5%AE%83%E4%B8%93%E9%97%A8%E6%9E%84%E5%BB%BA%E7%9A%84%E6%95%B0%E6%8D%AE%E5%BA%93%E6%9C%8D%E5%8A%A1)
@@ -93,7 +94,18 @@
         LV4
         100W级并发
         2019年支持udp
-        
+
+## ELB 实验
+    在EC2主机监听udp端口
+      nc -lvu 127.0.0.1 8080
+    本地测试端口 正常
+      echo -n "hello world,UDP" > /dev/udp/localhost/8080
+      nc -vu 127.0.0.1 8080
+    公网测试 正常
+      nc -vu Ip 8080
+    ELB测试 ...
+      nc -vu udp-xxx.elb.ap-northeast-2.amazonaws.com 8080
+
 ## RDS Relational Database Service
     支持主流数据库
       Amazon Aurora
