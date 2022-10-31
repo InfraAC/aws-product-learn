@@ -61,7 +61,9 @@
     删除
       aws cloudformation delete-stack --stack-name vpc-simple
     测试
-      
+      创建VPC
+      EC2绑定VPC
+      测试EC2出口，入口流量是否正常
     遇到问题
       SSL validation failed for https://cloudformation.ap-northeast-2.amazonaws.com/ EOF occurred in violation of protocol (_ssl.c:1129)
         关掉代理就好
