@@ -2,6 +2,7 @@
 <!-- TOC -->
 
 - [aws product learn](#aws-product-learn)
+    - [AWS products](#aws-products)
     - [EC2实验](#ec2%E5%AE%9E%E9%AA%8C)
     - [S3](#s3)
     - [VPC](#vpc)
@@ -10,12 +11,18 @@
     - [ELB Elastic Load Balancing](#elb-elastic-load-balancing)
     - [RDS Relational Database Service](#rds-relational-database-service)
     - [DynamoDB适用场景](#dynamodb%E9%80%82%E7%94%A8%E5%9C%BA%E6%99%AF)
+    - [其它专门构建的数据库服务](#%E5%85%B6%E5%AE%83%E4%B8%93%E9%97%A8%E6%9E%84%E5%BB%BA%E7%9A%84%E6%95%B0%E6%8D%AE%E5%BA%93%E6%9C%8D%E5%8A%A1)
     - [Redshift OLAP On-Line Analytical Processing](#redshift-olap-on-line-analytical-processing)
     - [CloudFormation](#cloudformation)
     - [Elastic Beanstalk代码即服务](#elastic-beanstalk%E4%BB%A3%E7%A0%81%E5%8D%B3%E6%9C%8D%E5%8A%A1)
     - [Diretc Connect](#diretc-connect)
+    - [安全性，身份认证与合规性](#%E5%AE%89%E5%85%A8%E6%80%A7%E8%BA%AB%E4%BB%BD%E8%AE%A4%E8%AF%81%E4%B8%8E%E5%90%88%E8%A7%84%E6%80%A7)
 
 <!-- /TOC -->
+
+## AWS products
+  [products](./products/README.md)
+
 ## EC2实验
     创建
       aws cloudformation deploy --stack-name ec2-simple --template-file ./example/ec2/EC2InstanceWithSecurityGroupSample.yaml
@@ -110,6 +117,11 @@
     游戏
     物联网Iot
 
+## 其它专门构建的数据库服务
+    Amazon Redshift 快速、可扩展的数据仓库LDAP
+    Amazon DouctmentDB 与MongoDB兼容的数据库
+    Amazon Neptune图形数据库
+
 ## Redshift OLAP On-Line Analytical Processing
     机器学习
     大规模并行查询
@@ -131,3 +143,22 @@
 ## Diretc Connect
     专线
   ![专线网络架构](./directConnect/1666883898115.jpg)
+
+## 安全性，身份认证与合规性
+    AWS Artifact
+    AWS Certificate Manager
+    Amazon Cloud Directory
+    AWS CloudHSM
+    Amazon Cognito
+    AWS Directory Service
+    AWS Firewall Manager
+    Amazon GuardDuty
+    AWS Identity and Access Management
+    Amazon Inspector
+    AWS Key Management Service
+    Amazon Macie
+    AWS Organizations
+    AWS Shield
+    AWS Scerts Manater
+    AWS Single Sign-On
+    AWS WAF
